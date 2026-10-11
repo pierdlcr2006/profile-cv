@@ -1,138 +1,49 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1c35">
-  <meta name="description" content="Portafolio profesional de Piero De la Cruz Palpa, desarrollador de software enfocado en backend, APIs y soluciones digitales.">
-  <title>Piero De la Cruz — Software Developer</title>
-  <style>
-    :root{--navy:#0b1c35;--blue:#225ee8;--sky:#dcecff;--ice:#f4f8ff;--ink:#12243d;--muted:#64748b;--line:#dce5f0;--white:#fff;--mint:#b8f5df}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f8fbff;color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-    .nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:750;letter-spacing:-.03em}.brand-mark{width:36px;height:36px;border-radius:12px;background:var(--blue);color:white;display:grid;place-items:center;font-size:13px;letter-spacing:.02em}.nav-links{display:flex;gap:28px;align-items:center}.nav-links a{text-decoration:none;font-size:13px;color:#52627a;font-weight:600}.nav-links a:hover,.text-link:hover{color:var(--blue)}.nav-cta,.button{background:var(--blue);color:#fff!important;padding:11px 17px;border-radius:12px;text-decoration:none;font-weight:650;font-size:13px;display:inline-flex;gap:8px;align-items:center;box-shadow:0 8px 20px #225ee827}
-    .hero{background:var(--navy);color:white;position:relative;overflow:hidden;border-radius:26px;min-height:520px;margin:18px auto 0}.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff17;border-radius:50%;width:490px;height:490px;right:-80px;top:-185px}.hero:after{width:355px;height:355px;right:-13px;top:-117px;border-color:#72a8ff40}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;min-height:520px;padding:66px 72px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.13em;font-size:11px;font-weight:750;color:#9cc4ff}.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px #b8f5df20}.hero h1{font-size:clamp(42px,6vw,68px);line-height:1.05;letter-spacing:-.06em;margin:21px 0 17px;max-width:680px}.hero h1 span{color:#93baff}.hero p{color:#c3d0e3;max-width:560px;font-size:16px;margin:0 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.button.secondary{background:#ffffff10!important;border:1px solid #ffffff35;box-shadow:none}.hero-note{color:#a6b6cc;font-size:12px;margin-top:25px!important}.visual{height:330px;position:relative;display:grid;place-items:center}.orb{height:224px;width:224px;border-radius:50%;background:radial-gradient(circle at 33% 27%,#b4e1ff,#679bff 40%,#345fe7 68%,#193789);box-shadow:0 30px 90px #4c83ff55;display:grid;place-items:center;font-size:77px;font-weight:750;letter-spacing:-.08em;color:white;border:1px solid #ffffff60}.orbit{position:absolute;width:305px;height:305px;border:1px solid #ffffff25;border-radius:50%;transform:rotate(-27deg) scaleY(.55)}.float-card{position:absolute;background:#142b4c;border:1px solid #ffffff23;border-radius:14px;padding:12px 15px;color:#dbeafe;font-size:12px;box-shadow:0 12px 30px #0003}.fc1{top:32px;right:2px}.fc2{bottom:36px;left:0}.fc3{bottom:0;right:25px}
-    section{padding:94px 0}.section-kicker{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--blue);text-transform:uppercase}.section-title{font-size:clamp(30px,4vw,42px);line-height:1.12;letter-spacing:-.045em;margin:10px 0 14px;color:var(--navy)}.section-intro{color:var(--muted);max-width:650px;margin:0 0 35px}.profile-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}.profile-card{background:white;border:1px solid var(--line);border-radius:20px;padding:28px}.profile-card h3{margin:0 0 10px;font-size:17px;color:var(--navy)}.profile-card p{color:var(--muted);font-size:14px;margin:0}.tag-list{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}.tag{font-size:12px;color:#2853a6;background:#edf4ff;border:1px solid #d5e5ff;border-radius:999px;padding:6px 11px;font-weight:620}.statline{display:flex;gap:18px;flex-wrap:wrap;padding-top:18px;border-top:1px solid var(--line);color:#64748b;font-size:12px}.statline strong{color:var(--navy)}
-    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:25px}.skill{border:1px solid var(--line);background:white;border-radius:14px;padding:16px 18px;font-weight:700;font-size:13px;color:#18365f}.skill small{display:block;color:#718096;font-size:11px;font-weight:500;margin-top:3px}
-    .dark-section{background:var(--navy);color:white}.dark-section .section-title{color:white}.dark-section .section-intro{color:#b2c1d6}.timeline{display:grid;grid-template-columns:1fr 1fr;gap:16px}.project{background:#112847;border:1px solid #ffffff20;border-radius:18px;padding:25px;min-height:222px;display:flex;flex-direction:column}.project-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.project h3{font-size:18px;line-height:1.3;color:white;margin:0 0 8px}.project p{font-size:13px;color:#b2c1d6;margin:0 0 18px}.project .date{white-space:nowrap;border:1px solid #ffffff2a;border-radius:999px;padding:4px 9px;color:#a9caff;font-size:10px}.project .tag-list{margin:auto 0 0}.project .tag{background:#ffffff0e;border-color:#ffffff20;color:#c5ddff}
-    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.news{background:white;border:1px solid var(--line);border-radius:18px;padding:23px;display:flex;flex-direction:column;min-height:250px}.news-label{font-size:10px;color:#3062bd;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.news h3{font-size:17px;line-height:1.35;letter-spacing:-.02em;margin:12px 0;color:var(--navy)}.news p{font-size:13px;color:var(--muted);margin:0 0 20px}.text-link{font-size:12px;font-weight:700;color:var(--blue);text-decoration:none;margin-top:auto}
-    .contact{background:linear-gradient(135deg,#eaf3ff,#f7fbff);border:1px solid #dce9f9;border-radius:24px;padding:38px;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}.contact h2{font-size:32px;letter-spacing:-.04em;line-height:1.15;color:var(--navy);margin:8px 0 12px}.contact p{font-size:14px;color:var(--muted);margin:0}.contact-links{display:grid;gap:10px}.contact-link{background:white;border:1px solid var(--line);padding:13px 15px;border-radius:13px;text-decoration:none;font-size:13px;font-weight:700;color:#1c3558;display:flex;justify-content:space-between;align-items:center}.contact-link span{color:var(--blue);font-size:11px}
-    footer{padding:26px 0 38px;color:#75839a;font-size:11px;display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line)}.footer-brand{color:var(--navy);font-weight:750}
-    @media(max-width:800px){.nav{height:68px}.nav-links{gap:15px}.nav-links a:not(.nav-cta){display:none}.hero-grid{grid-template-columns:1fr;gap:0;padding:55px 35px 22px}.hero{min-height:unset}.hero-grid{min-height:unset}.visual{height:260px}.orb{height:165px;width:165px;font-size:58px}.orbit{width:240px;height:240px}.fc1{right:10%}.fc2{left:5%}.profile-grid{grid-template-columns:1fr;gap:18px}.skills{grid-template-columns:repeat(2,1fr)}.timeline{grid-template-columns:1fr}.news-grid{grid-template-columns:1fr}.contact{grid-template-columns:1fr}section{padding:70px 0}}
-    @media(max-width:480px){.wrap{width:min(100% - 26px,1120px)}.hero{border-radius:18px}.hero-grid{padding:42px 23px 18px}.hero h1{font-size:43px}.hero p{font-size:14px}.hero-actions .button{width:100%;justify-content:center}.visual{height:225px}.orb{height:145px;width:145px}.float-card{font-size:10px;padding:9px 11px}.fc1{top:18px;right:0}.fc2{bottom:24px}.fc3{bottom:0;right:8px}.skills{grid-template-columns:1fr 1fr;gap:9px}.skill{padding:13px 12px}.contact{padding:24px}.contact h2{font-size:27px}footer{flex-direction:column}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8faff"><meta name="description" content="Portafolio profesional de Piero De la Cruz Palpa, desarrollador de software con enfoque backend.">
+<title>Piero De la Cruz — Desarrollador de software</title>
+<style>
+:root{--blue:#2364dc;--blue-dark:#1748a5;--ink:#202a38;--muted:#667386;--paper:#fbfcff;--card:#fff;--line:#e4e9f1;--pale:#eff5ff;--green:#25845e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{width:min(910px,calc(100% - 38px));margin-inline:auto}a{color:inherit}.nav{display:flex;justify-content:center;padding:24px 0 10px}.navlinks{display:flex;align-items:center;gap:31px}.navlinks a{text-decoration:none;color:#5f6877;font-size:13px;font-weight:650}.navlinks a:hover{color:var(--blue)}.hero{padding:67px 0 79px;max-width:700px;margin:auto}.eyebrow{display:flex;align-items:center;gap:10px;color:#667386;font-size:13px}.avatar{height:58px;width:58px;border-radius:50%;background:linear-gradient(135deg,#9fc6ff,#2161d5);color:white;display:grid;place-items:center;font-size:19px;font-weight:800;letter-spacing:-.05em;box-shadow:0 0 0 4px white,0 0 0 6px #bcd2f5}.status{background:#eff8f4;color:var(--green);border:1px solid #cde8da;border-radius:999px;padding:5px 11px;font-size:11px;font-weight:650}.hero h1{font-size:clamp(38px,6vw,58px);letter-spacing:-.06em;line-height:1.13;margin:28px 0 15px;color:#263142}.hero h1 span{color:var(--blue)}.hero p{max-width:625px;color:#616e80;font-size:16px;margin:0}.socials{display:flex;align-items:center;gap:10px;margin-top:23px;flex-wrap:wrap}.social{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:9px;background:white;border:1px solid var(--line);text-decoration:none;font-size:12px;font-weight:700;color:#34445b}.social:hover{border-color:#a9c5f5;color:var(--blue)}.social.primary{background:var(--blue);border-color:var(--blue);color:white}
+section{padding:36px 0 52px;scroll-margin-top:24px}.section-heading{display:flex;align-items:center;gap:12px;margin-bottom:25px}.section-heading .icon{width:34px;height:34px;border-radius:10px;background:var(--pale);display:grid;place-items:center;color:var(--blue);font-weight:800}.section-heading h2{margin:0;color:#273244;font-size:24px;letter-spacing:-.04em}.section-lead{color:var(--muted);margin:-12px 0 25px;font-size:14px}.experience-list{border-left:1px solid #d8e0ec;margin-left:13px;padding-left:25px;display:grid;gap:22px}.experience{position:relative;display:grid;grid-template-columns:235px 1fr;gap:25px;padding:0 0 10px}.experience:before{content:"";position:absolute;width:10px;height:10px;border:3px solid white;border-radius:50%;background:#76a4f6;box-shadow:0 0 0 1px #aec6ef;left:-32px;top:7px}.role{color:var(--blue-dark);font-weight:750;font-size:15px;line-height:1.3}.company{font-weight:650;color:#344256;margin-top:4px}.date{font-size:11px;color:#8a96a6;margin-top:4px}.experience p{margin:0;color:#667386;font-size:13px}.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 5px 18px #213c6508}.card h3{font-size:16px;line-height:1.35;letter-spacing:-.02em;color:#273244;margin:0 0 8px}.card p{font-size:13px;color:var(--muted);margin:0 0 14px}.pillrow{display:flex;gap:7px;flex-wrap:wrap}.pill{font-size:10px;background:#f0f5fd;color:#45669a;border-radius:999px;padding:4px 9px;font-weight:650}.aboutbox{background:linear-gradient(130deg,#f2f7ff,#fff);border:1px solid #e1eaf7;border-radius:17px;padding:25px 27px;display:grid;grid-template-columns:1fr 170px;gap:24px;align-items:center}.aboutbox p{font-size:14px;color:#667386;margin:0 0 13px}.aboutbox p:last-child{margin:0}.about-mark{height:140px;border-radius:16px;background:linear-gradient(145deg,#d9e9ff,#f3f7ff);display:grid;place-items:center;color:#2d68d1;font-size:52px;font-weight:800;letter-spacing:-.08em}.reading-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.reading{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;display:flex;flex-direction:column;min-height:205px}.reading small{color:var(--blue);font-size:9px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}.reading h3{font-size:14px;line-height:1.35;margin:10px 0;color:#2a3749}.reading p{font-size:12px;color:var(--muted);margin:0 0 15px}.reading a{margin-top:auto;text-decoration:none;color:var(--blue);font-size:11px;font-weight:750}.contactbox{border:1px solid #dce6f5;background:#f3f7fd;border-radius:17px;padding:28px;display:flex;justify-content:space-between;gap:25px;align-items:center}.contactbox h2{font-size:24px;line-height:1.2;letter-spacing:-.04em;margin:0 0 8px}.contactbox p{font-size:13px;color:var(--muted);margin:0}.contactlinks{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}.contactlinks a{border-radius:9px;border:1px solid #d9e2ef;background:#fff;padding:9px 12px;text-decoration:none;font-size:12px;font-weight:700;color:#345176;white-space:nowrap}.contactlinks a:hover{color:var(--blue);border-color:#a9c5f5}footer{padding:34px 0 28px;text-align:center;color:#8994a3;font-size:11px}
+@media(max-width:700px){.navlinks{gap:18px}.navlinks a{font-size:11px}.hero{padding:52px 0 60px}.experience{grid-template-columns:1fr;gap:7px}.cards{grid-template-columns:1fr}.reading-grid{grid-template-columns:1fr}.reading{min-height:unset}.aboutbox{grid-template-columns:1fr 110px}.about-mark{height:110px;font-size:40px}.contactbox{align-items:flex-start;flex-direction:column}.contactlinks{justify-content:flex-start}.section-heading h2{font-size:21px}}
+@media(max-width:430px){.wrap{width:calc(100% - 28px)}.navlinks{gap:14px}.navlinks a{font-size:10px}.hero h1{font-size:40px}.eyebrow{font-size:11px}.avatar{width:50px;height:50px}.status{font-size:10px}.aboutbox{grid-template-columns:1fr}.about-mark{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
-  <header class="wrap nav">
-    <a class="brand" href="#inicio" aria-label="Piero De la Cruz, inicio"><span class="brand-mark">PD</span><span>Piero De la Cruz</span></a>
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a href="#perfil">Perfil</a><a href="#proyectos">Proyectos</a><a href="#noticias">Noticias</a>
-      <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
-  <main>
-    <div class="wrap" id="inicio">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-grid">
-          <div>
-            <div class="eyebrow"><span class="dot"></span> Software Developer · Perú</div>
-            <h1 id="hero-title">Ideas claras.<br><span>Software útil.</span></h1>
-            <p>Soy Piero De la Cruz, desarrollador de software enfocado en backend y en crear soluciones digitales bien pensadas, mantenibles y escalables.</p>
-            <div class="hero-actions">
-              <a class="button" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
-              <a class="button secondary" href="https://www.linkedin.com/in/piero-de-la-cruz-palpa/" target="_blank" rel="noopener noreferrer">Conectar en LinkedIn <span aria-hidden="true">↗</span></a>
-            </div>
-            <p class="hero-note">Aprendizaje continuo · Colaboración · Desarrollo responsable</p>
-          </div>
-          <div class="visual" aria-label="Identidad visual con las iniciales de Piero De la Cruz">
-            <div class="orbit" aria-hidden="true"></div><div class="orb" aria-hidden="true">PD</div>
-            <div class="float-card fc1">⌘ &nbsp; APIs RESTful</div>
-            <div class="float-card fc2">Java · TypeScript</div>
-            <div class="float-card fc3">Backend first</div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <section id="perfil">
-      <div class="wrap">
-        <div class="profile-grid">
-          <div>
-            <div class="section-kicker">Perfil profesional</div>
-            <h2 class="section-title">Tecnología con intención y trabajo en equipo.</h2>
-            <p class="section-intro">Egresado de Diseño y Desarrollo de Software en TECSUP. Me adapto a entornos dinámicos, disfruto resolver problemas y colaborar para convertir necesidades reales en productos digitales.</p>
-            <div class="profile-card">
-              <h3>Mi objetivo profesional</h3>
-              <p>Seguir creciendo como desarrollador de software, aportando en la construcción de servicios y experiencias digitales seguras, eficientes y fáciles de mantener.</p>
-              <div class="tag-list"><span class="tag">Responsabilidad</span><span class="tag">Comunicación abierta</span><span class="tag">Aprendizaje continuo</span><span class="tag">Ética profesional</span></div>
-            </div>
-          </div>
-          <div>
-            <div class="section-kicker">Herramientas y competencias</div>
-            <div class="skills">
-              <div class="skill">Java <small>Servicios backend</small></div>
-              <div class="skill">Spring Boot <small>APIs empresariales</small></div>
-              <div class="skill">Node.js <small>NestJS · servicios REST</small></div>
-              <div class="skill">TypeScript <small>Frontend y backend</small></div>
-              <div class="skill">Angular <small>Interfaces y dashboards</small></div>
-              <div class="skill">FastAPI <small>Servicios con Python</small></div>
-              <div class="skill">Arquitectura <small>Microservicios · Hexagonal</small></div>
-              <div class="skill">Integraciones <small>JWT · OAuth2 · AWS</small></div>
-              <div class="skill">Inglés <small>Nivel intermedio</small></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="dark-section" id="proyectos">
-      <div class="wrap">
-        <div class="section-kicker">Proyectos y experiencia</div>
-        <h2 class="section-title">Construir, aprender, mejorar.</h2>
-        <p class="section-intro">Una muestra de los retos en los que he participado durante mi experiencia en desarrollo de software.</p>
-        <div class="timeline">
-          <article class="project">
-            <div class="project-top"><div><h3>Plataforma de innovación educativa</h3><p>Desarrollo backend para la gestión de eventos, postulaciones, proyectos, equipos y usuarios, con evaluación asistida por inteligencia artificial.</p></div><span class="date">TECSUP · 2026</span></div>
-            <div class="tag-list"><span class="tag">Spring Boot</span><span class="tag">Clean Architecture</span><span class="tag">AWS</span><span class="tag">IA</span></div>
-          </article>
-          <article class="project">
-            <div class="project-top"><div><h3>Servicios inteligentes y voz en tiempo real</h3><p>Durante mi pasantía backend participé en módulos de autenticación, gestión académica, chat inteligente y procesamiento de voz.</p></div><span class="date">TECSUP · 2025–26</span></div>
-            <div class="tag-list"><span class="tag">NestJS</span><span class="tag">FastAPI</span><span class="tag">TTS · STT</span><span class="tag">Microservicios</span></div>
-          </article>
-          <article class="project">
-            <div class="project-top"><div><h3>Dashboards para gestión de talento</h3><p>Desarrollo frontend de vistas para perfiles de administrador, profesor y consultor, con integración a servicios REST.</p></div><span class="date">Stratedu · 2026</span></div>
-            <div class="tag-list"><span class="tag">Angular</span><span class="tag">Componentes reutilizables</span><span class="tag">UX</span></div>
-          </article>
-          <article class="project">
-            <div class="project-top"><div><h3>Formación en Diseño y Desarrollo de Software</h3><p>Formación superior en TECSUP enfocada en fundamentos de programación, construcción de software y trabajo colaborativo.</p></div><span class="date">TECSUP</span></div>
-            <div class="tag-list"><span class="tag">Desarrollo web</span><span class="tag">Buenas prácticas</span><span class="tag">Trabajo en equipo</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section id="noticias">
-      <div class="wrap">
-        <div class="section-kicker">Noticias y lecturas</div>
-        <h2 class="section-title">Ideas para seguir aprendiendo.</h2>
-        <p class="section-intro">Lecturas seleccionadas sobre inteligencia artificial aplicada al desarrollo y arquitectura de software.</p>
-        <div class="news-grid">
-          <article class="news"><div class="news-label">Español · Innovación y Software</div><h3>La IA generativa en el desarrollo de software</h3><p>Una revisión sobre cómo la IA generativa está influyendo en distintas industrias y etapas de creación de software, junto con sus retos de precisión y ética.</p><a class="text-link" href="https://revistas.ulasalle.edu.pe/innosoft/article/view/259" target="_blank" rel="noopener noreferrer">Leer artículo ↗</a></article>
-          <article class="news"><div class="news-label">Español · MIT Technology Review</div><h3>La programación con IA está en todas partes, pero no convence a todos</h3><p>Un análisis del debate sobre productividad, calidad y mantenimiento del código cuando se incorporan asistentes de IA al trabajo de desarrollo.</p><a class="text-link" href="https://www.technologyreview.es/article/la-programacion-con-ia-esta-en-todas-partes-pero-no-convence-a-todos" target="_blank" rel="noopener noreferrer">Leer artículo ↗</a></article>
-          <article class="news"><div class="news-label">English · Martin Fowler</div><h3>Microservices: a definition of this architectural term</h3><p>A practical overview of the microservice architectural style, its benefits, and the trade-offs teams should consider before adopting it.</p><a class="text-link" href="https://martinfowler.com/articles/microservices.html" target="_blank" rel="noopener noreferrer">Read article ↗</a></article>
-        </div>
-      </div>
-    </section>
-    <section id="contacto">
-      <div class="wrap">
-        <div class="contact">
-          <div><div class="section-kicker">Contactos y networking</div><h2>Conectemos para compartir ideas y proyectos.</h2><p>Estoy abierto a conversar sobre desarrollo backend, arquitectura de software e innovación. Puedes encontrarme en mis perfiles profesionales.</p></div>
-          <div class="contact-links">
-            <a class="contact-link" href="https://www.linkedin.com/in/piero-de-la-cruz-palpa/" target="_blank" rel="noopener noreferrer">LinkedIn <span>Perfil profesional ↗</span></a>
-            <a class="contact-link" href="https://github.com/pierdlcr2006" target="_blank" rel="noopener noreferrer">GitHub <span>Proyectos de código ↗</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="wrap"><span><span class="footer-brand">Piero De la Cruz</span> · Portafolio profesional</span><span>Diseñado y desarrollado con HTML + CSS · 2026</span></footer>
-</body>
-</html>
-
+<header class="wrap nav"><nav class="navlinks" aria-label="Navegación principal"><a href="#experiencia">Experiencia</a><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><a href="#lecturas">Noticias</a><a href="#contacto">Contacto</a></nav></header>
+<main class="wrap">
+<div class="hero" id="inicio">
+<div class="eyebrow"><div class="avatar" aria-label="Iniciales de Piero De la Cruz">PD</div><span class="status">Desarrollador de software · Perú</span></div>
+<h1>Hola, soy <span>Piero De la Cruz</span></h1>
+<p>Egresado de Diseño y Desarrollo de Software en TECSUP. Me enfoco en construir servicios backend y experiencias digitales útiles, cuidando la calidad del código, la colaboración y el aprendizaje continuo.</p>
+<div class="socials"><a class="social primary" href="https://www.linkedin.com/in/piero-de-la-cruz-palpa/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="social" href="https://github.com/pierdlcr2006" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</div>
+<section id="experiencia"><div class="section-heading"><span class="icon" aria-hidden="true">↗</span><h2>Experiencia laboral</h2></div>
+<div class="experience-list">
+<article class="experience"><div><div class="role">Backend Developer</div><div class="company">TECSUP</div><div class="date">Abril 2026 — actualidad</div></div><p>Diseño backend modular para el área de innovación: gestión de eventos, postulaciones, proyectos y equipos. Integración de seguridad, almacenamiento documental y funciones de inteligencia artificial.</p></article>
+<article class="experience"><div><div class="role">Frontend Developer</div><div class="company">Stratedu</div><div class="date">Marzo — junio 2026</div></div><p>Construí vistas y dashboards en Angular para distintos perfiles. Integré interfaces con servicios REST y trabajé en componentes reutilizables y flujos de navegación.</p></article>
+<article class="experience"><div><div class="role">Pasante Backend Developer</div><div class="company">TECSUP</div><div class="date">Diciembre 2025 — abril 2026</div></div><p>Participé en microservicios con NestJS y FastAPI, incluyendo autenticación, gestión académica, chat inteligente y procesamiento de voz en tiempo real.</p></article>
+</div></section>
+<section id="proyectos"><div class="section-heading"><span class="icon" aria-hidden="true">⌘</span><h2>Proyectos</h2></div><p class="section-lead">Retos y experiencias que reflejan mi enfoque de desarrollo.</p>
+<div class="cards">
+<article class="card"><h3>Plataforma de innovación educativa</h3><p>Backend para administrar eventos, postulaciones, equipos y proyectos, con evaluación de propuestas asistida por IA.</p><div class="pillrow"><span class="pill">Spring Boot</span><span class="pill">Arquitectura Hexagonal</span><span class="pill">AWS</span></div></article>
+<article class="card"><h3>Chat inteligente y procesamiento de voz</h3><p>Servicios de conversación, texto a voz y voz a texto, conectados con módulos académicos y autenticación.</p><div class="pillrow"><span class="pill">NestJS</span><span class="pill">FastAPI</span><span class="pill">TTS · STT</span></div></article>
+<article class="card"><h3>Dashboards de gestión</h3><p>Interfaces para perfiles de administrador, profesor y consultor, integradas con servicios REST.</p><div class="pillrow"><span class="pill">Angular</span><span class="pill">TypeScript</span><span class="pill">UX</span></div></article>
+<article class="card"><h3>Competencias técnicas</h3><p>Desarrollo backend y frontend con foco en mantenibilidad, seguridad, diseño modular y colaboración.</p><div class="pillrow"><span class="pill">Java</span><span class="pill">Node.js</span><span class="pill">Spring</span><span class="pill">REST</span></div></article>
+</div></section>
+<section id="sobre-mi"><div class="section-heading"><span class="icon" aria-hidden="true">◎</span><h2>Sobre mí</h2></div>
+<div class="aboutbox"><div><p>Soy egresado de TECSUP y disfruto resolver problemas con software. Mi experiencia incluye desarrollo backend con Java, NestJS y FastAPI, además de construcción de interfaces con Angular.</p><p>Mi objetivo es seguir creciendo como desarrollador y aportar a equipos que valoren la calidad, la responsabilidad y las soluciones centradas en las personas. Tengo inglés intermedio y mantengo una actitud de aprendizaje continuo.</p><div class="pillrow"><span class="pill">Trabajo en equipo</span><span class="pill">Responsabilidad</span><span class="pill">Ética</span><span class="pill">Aprendizaje continuo</span></div></div><div class="about-mark" aria-hidden="true">PD</div></div></section>
+<section id="lecturas"><div class="section-heading"><span class="icon" aria-hidden="true">≡</span><h2>Noticias y lecturas</h2></div><p class="section-lead">Artículos relacionados con backend, arquitectura e inteligencia artificial aplicada al software.</p>
+<div class="reading-grid">
+<article class="reading"><small>Español · Innovación y Software</small><h3>La IA generativa en el desarrollo de software</h3><p>Revisión sobre su impacto en distintas industrias y sus retos de precisión y ética.</p><a href="https://revistas.ulasalle.edu.pe/innosoft/article/view/259" target="_blank" rel="noopener noreferrer">Leer artículo ↗</a></article>
+<article class="reading"><small>Español · MIT Technology Review</small><h3>La programación con IA está en todas partes, pero no convence a todos</h3><p>Un análisis del debate sobre productividad, calidad y mantenimiento al usar IA para programar.</p><a href="https://www.technologyreview.es/article/la-programacion-con-ia-esta-en-todas-partes-pero-no-convence-a-todos" target="_blank" rel="noopener noreferrer">Leer artículo ↗</a></article>
+<article class="reading"><small>English · Martin Fowler</small><h3>Microservices: a definition of this architectural term</h3><p>A practical overview of the microservices style and the trade-offs teams should consider.</p><a href="https://martinfowler.com/articles/microservices.html" target="_blank" rel="noopener noreferrer">Read article ↗</a></article>
+</div></section>
+<section id="contacto"><div class="contactbox"><div><h2>Conectemos</h2><p>Estoy abierto a conversar sobre desarrollo backend, software e innovación.</p></div><div class="contactlinks"><a href="https://www.linkedin.com/in/piero-de-la-cruz-palpa/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/pierdlcr2006" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div></section>
+</main>
+<footer class="wrap">© 2026 Piero De la Cruz · Diseñado y desarrollado con HTML + CSS</footer>
+</body></html>
